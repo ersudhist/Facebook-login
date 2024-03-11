@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url('./image/Facebook-Logo.png');
+    opacity: 0.08;
+    pointer-events: none;
+  }
+
+
+.container {
+    display: flex;
+    /* align-items: center; */
+    /* padding: 0 15px; */
+    min-height: 100vh;
+    justify-content: center;
+    background: #f0f2f5;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.logo .text {
+    margin-bottom: 90px;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.logo p {
+    font-size: 1.5rem;
+    margin-left: 28px;
+    white-space: nowrap;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    max-width: 370px;
+    margin-right: 50px;
+    width: 100%;
+}
+
+form input {
+    height: 50px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    padding: 0 14px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+.link .login {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1877f2;
+    padding: 10px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+  
+.link .login::before {
+    content: "Swipe right to login →";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #AD1457;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.4s ease;
+}
+  
+.link .login:hover::before {
+    left: 0;
+}
+  
+.link .login::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #fff;
+    transform: translateY(-50%);
+    transition: width 0.2s ease;
+}
+  
+.link .login:hover::after {
+    width: 10px;
+}
+  
+form a {
+    text-decoration: none;
+}
+
+.link .forgot {
+    color: #1877f2;
+    font-size: 0.875rem;
+}
+
+.link .forgot:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    height: 0.5px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button a {
+    padding: 13px 20px;
+    background: #42b72a;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.063rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.button a:hover {
+    background: #3ba626;
+}
+
+.sub-link p {
+    width: 300px;
+    margin-left: 735px;
+    position: relative;
+    font-size: 12px;
+    margin-top: -100px;
+}
+
+.sub-link p a {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sub-link a:hover {
+    text-decoration: underline;
+}
+
+  
+
+@media (max-width: 900px) {
+  .logo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo .text {
+    margin-bottom: 30px;
+  }
+}
+
+
+  
+  @media (max-width: 900px) {
+    .container {
+      padding: 0 10px;
+    }
+    .logo {
+      flex-direction: column;
+      text-align: center;
+      /* margin-top:50px ; */
+    }
+  
+    .logo .text {
+      margin-bottom: 30px;
+    }
+  
+    form {
+      margin-right: 0;
+      margin-bottom: 150px;
+    }
+
+    .sub-link p { 
+        margin-top: -120px;
+        margin-left: 300px;
+      }
+  }
+  
+  @media (max-width: 460px) {
+    .logo h1 {
+      font-size: 3.5rem;
+    }
+  
+    .logo p {
+      font-size: 1.3rem;
+    }
+  
+    form {
+      padding: 15px;
+    }
+  }
